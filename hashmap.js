@@ -7,13 +7,17 @@ function hashMap() {
 }
 
 // Method
-function hash (key) {
+function hash(key) {
   let hashCode = 0;
 
   const primeNumber = 31;
   for (let i = 0; i < key.length; i++) {
-    hashCode = primeNumber * hashCode + key.charCodeAt(i);
+    hashCode = (primeNumber * hashCode + key.charCodeAt(i)) % 16;
   }
 
   return hashCode;
+}
+
+function set(key, value) {
+  
 }
