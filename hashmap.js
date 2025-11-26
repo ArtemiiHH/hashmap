@@ -18,7 +18,14 @@ function hash(key) {
   return hashCode;
 }
 
-function set(key, value) {}
+function set(key, value) {
+  let key = new Map();
+  value = key.value;
+
+  if (key !== null) {
+    value.set();
+  }
+}
 
 function get(key) {}
 
