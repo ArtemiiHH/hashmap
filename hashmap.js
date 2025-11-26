@@ -18,6 +18,20 @@ function hash(key) {
   return hashCode;
 }
 
-function set(key, value) {
-  
-}
+function set(key, value) {}
+
+function get(key) {}
+
+function has(key) {}
+
+function remove(key) {}
+
+function length() {}
+
+function clear() {}
+
+function keys() {}
+
+function values() {}
+
+function entries() {}
