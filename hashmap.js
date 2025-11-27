@@ -47,6 +47,7 @@ export class HashMap {
     this.size++;
 
     if (this.size / this.capacity > this.loadFactor) {
+      this.resize();
     }
   }
 
