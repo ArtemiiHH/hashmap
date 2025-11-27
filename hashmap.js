@@ -19,7 +19,23 @@ export class HashMap {
     return hashCode;
   }
 
-  set(key, value) {}
+  set(key, value) {
+    const index = this.hash(key);
+    const bucket = this.buckets[index];
+
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i].key === key) {
+        bucket[i].value = value;
+        return;
+      }
+    }
+
+    bucket.push({ key, value });
+    this.size++;
+
+    if (this.size / this.capacity > this.loadFactor) {
+    }
+  }
 
   get(key) {}
 
