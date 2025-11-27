@@ -19,6 +19,8 @@ export class HashMap {
     return hashCode;
   }
 
+  resize() {}
+
   set(key, value) {
     const index = this.hash(key);
     const bucket = this.buckets[index];
