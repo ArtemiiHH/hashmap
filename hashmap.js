@@ -1,44 +1,51 @@
-// Factory function
-function hashMap() {
-  let loadFactor = 0.75;
-  let capacity = 16;
-
-  return { loadFactor, capacity };
+// Hash Map Class
+class HashMap {
+  constructor(loadFactor = 0.75, capacity = 16) {
+    this.loadFactor = loadFactor;
+    this.capacity = capacity;
+    this.size = 0;
+    this.buckets = new Array(this.capacity);
+  }
 }
 
 // Method
-function hash(key) {
-  let hashCode = 0;
+// function hash(key) {
+//   let hashCode = 0;
 
-  const primeNumber = 31;
-  for (let i = 0; i < key.length; i++) {
-    hashCode = (primeNumber * hashCode + key.charCodeAt(i)) % 16;
-  }
+//   const primeNumber = 31;
+//   for (let i = 0; i < key.length; i++) {
+//     hashCode = (primeNumber * hashCode + key.charCodeAt(i)) % hashMap;
+//   }
 
-  return hashCode;
-}
+//   return hashCode;
+// }
 
-function set(key, value) {
-  let key = new Map();
-  value = key.value;
+// function set(key, value) {
+//   hash(key);
 
-  if (key !== null) {
-    value.set();
-  }
-}
 
-function get(key) {}
+// }
 
-function has(key) {}
+// function get(key) {
+//   key = key.value;
 
-function remove(key) {}
+//   if (key === null) {
+//     return null;
+//   } else {
+//     return key;
+//   }
+// }
 
-function length() {}
+// function has(key) {}
 
-function clear() {}
+// function remove(key) {}
 
-function keys() {}
+// function length() {}
 
-function values() {}
+// function clear() {}
 
-function entries() {}
+// function keys() {}
+
+// function values() {}
+
+// function entries() {}
