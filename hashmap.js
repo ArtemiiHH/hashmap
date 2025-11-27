@@ -4,7 +4,7 @@ export class HashMap {
     this.loadFactor = loadFactor;
     this.capacity = capacity;
     this.size = 0;
-    this.buckets = new Array(this.capacity);
+    this.buckets = new Array(this.capacity).fill(null).map(() => []);
   }
 
   // Class Methods
