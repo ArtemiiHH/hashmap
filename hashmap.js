@@ -96,7 +96,10 @@ export class HashMap {
     return this.size;
   }
 
-  clear() {}
+  clear() {
+    this.size = 0;
+    this.buckets = new Array(this.capacity).fill(null).map(() => ([]));
+  }
 
   keys() {}
 
