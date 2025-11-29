@@ -98,12 +98,42 @@ export class HashMap {
 
   clear() {
     this.size = 0;
-    this.buckets = new Array(this.capacity).fill(null).map(() => ([]));
+    this.buckets = new Array(this.capacity).fill(null).map(() => []);
   }
 
-  keys() {}
+  keys() {
+    const result = [];
+    const allBuckets = this.buckets;
 
-  values() {}
+    for (const bucket of allBuckets) {
+      for (const entry of bucket) {
+        result.push(entry.key);
+      }
+    }
+    return result;
+  }
 
-  entries() {}
+  values() {
+    const result = [];
+    const allBuckets = this.buckets;
+
+    for (const bucket of allBuckets) {
+      for (const entry of bucket) {
+        result.push(entry.value);
+      }
+    }
+    return result;
+  }
+
+  entries() {
+    const result = [];
+    const allBuckets = this.buckets;
+
+    for (const bucket of allBuckets) {
+      for (const entry of bucket) {
+        result.push([entry.key, entry.value]);
+      }
+    }
+    return result;
+  }
 }
